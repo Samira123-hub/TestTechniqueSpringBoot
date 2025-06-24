@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tâches du Projet</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<h1 th:text="'Tâches du projet : ' + ${project.name}"></h1>
+
+<div>
+    <a th:href="@{'/projects/' + ${project.id} + '/tasks/new'}">
+        <button class="button-right">➕ Nouvelle tâche</button>
+    </a>
+</div>
+
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Titre</th>
+        <th>Description</th>
+        <th>Statut</th>
+        <th>Échéance</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="task : ${tasks}">
+        <td th:text="${task.id}"></td>
+        <td th:text="${task.title}"></td>
+        <td th:text="${task.description}"></td>
+        <td th:text="${task.status}"></td>
+        <td th:text="${task.dueDate}"></td>
+        <td>
+            <a th:href="@{'/tasks/edit/'+ ${task.id}}">✏️</a>
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>

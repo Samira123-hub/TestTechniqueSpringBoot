@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Projets</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Liste des projets :</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Date de début</th>
+        <th>Date de fin</th>
+        <th>Tâches</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="project : ${projects}">
+        <td th:text="${project.id}"></td>
+        <td th:text="${project.name}"></td>
+        <td th:text="${project.description}"></td>
+        <td th:text="${project.startDate}"></td>
+        <td th:text="${project.endDate}"></td>
+        <td>
+            <a th:href="@{'/projects/' + ${project.id} + '/tasks'}">Voir les tâches</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

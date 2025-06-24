@@ -1,0 +1,104 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Styling the heading */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+/* Centering the table and adding some spacing */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Styling the table headers */
+table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Styling the table rows */
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Adding hover effects to rows */
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Adding spacing at the bottom of the page */
+body > h1 {
+    margin-bottom: 20px;
+}
+
+
+
+/* Style for the button */
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding inside the button */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove text underline */
+    display: inline-block; /* Allow inline placement */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Style for hover effect */
+button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Style for focus effect */
+button:focus {
+    outline: 2px solid #2e8b57; /* Outline around the button for accessibility */
+}
+
+/* Conteneur centré pour les boutons */
+.button-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Style pour un bouton placé à droite */
+.button-right {
+    display: block;
+    margin: 20px auto 20px 75%;
+    padding: 10px 20px;
+}
+
+/* Icône dans le bouton (si tu utilises font-awesome ou emoji) */
+button i {
+    margin-right: 8px;
+}
+a {
+    text-decoration: none;
+}
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifier une Tâche</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+
+<h2 th:text="'Modifier la tâche : ' + ${task.title} + 'pour le projet : ' + ${project.name}">Modification d'une tâche</h2>
+
+<form th:action="@{'/tasks/' + ${task.id}}" method="post" th:object="${task}">
+    <input type="hidden" name="_method" value="put" />
+    <div>
+        <label for="title">Titre :</label>
+        <input type="text" id="title" th:field="*{title}" required />
+    </div>
+
+    <div>
+        <label for="description">Description :</label>
+        <textarea id="description" th:field="*{description}" required></textarea>
+    </div>
+
+    <div>
+        <label for="status">Statut :</label>
+        <input type="text" id="status" th:field="*{status}" required />
+    </div>
+
+    <div>
+        <label for="dueDate">Échéance :</label>
+        <input type="date" id="dueDate" th:field="*{dueDate}" required />
+    </div>
+
+    <!-- Association du projet -->
+    <input type="hidden" th:field="*{project.id}" />
+
+    <div class="button-container">
+        <button type="submit">valider</button>
+    </div>
+
+</form>
+
+
+</body>
+</html>
