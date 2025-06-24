@@ -4,7 +4,6 @@ Une application web développée avec **Spring Boot** et **Thymeleaf** pour gér
 
 ## 🚀 Fonctionnalités
 
-- 🔹 Création, modification et suppression de projets
 - 🔹 Association de tâches à un projet
 - 🔹 Formulaire dynamique pour ajouter et modifier une tâche
 - 🔹 Affichage des tâches par projet
