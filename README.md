@@ -13,7 +13,7 @@ Une application web développée avec **Spring Boot** et **Thymeleaf** pour gér
 ## 🛠️ Technologies
 
 - **Java 17+**
-- **Spring Boot 3**
+- **Spring Boot**
 - **Thymeleaf**
 - **Spring MVC / Data JPA**
 - **H2 Database (mode mémoire)**
